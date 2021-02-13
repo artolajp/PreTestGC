@@ -15,7 +15,5 @@
             Regla = regla;
         }
 
-
-
     }
 }
