@@ -5,9 +5,9 @@ Parte F
 
 ¿Cómo se podría establecer a estos objetos como imprimibles?.
 
-Propongo crear una interfaz "Imprimible" con un método "Imprimir" con el objetivo de que cualquier clase que la implemplente se encargue de comunicarse con el responsable de imprimir o en su defecto que devuelva un objeto que el responsable de impresión necesita.
+Propongo crear una interfaz "Imprimible" con un método "Imprimir" con el objetivo de que cualquier clase que la implemplente se encargue de comunicarse con el responsable de impresión, o en su defecto, que devuelva un objeto que el responsable de impresión necesita para imprimir.
 
-Por lo tanto la clase Cotización deberia implementar la interfaz "Imprimible" y para el historial se debería crear una clase que contenga la lista de cotizaciones e implemente la interfaz "Imprimible".
+Por lo tanto la clase Cotización deberá implementar la interfaz "Imprimible" y para el historial de cotizaciones se deberá crear una clase que implemente la interfaz "Imprimible" y que contenga la lista de cotizaciones. 
 
 Parte H
 
@@ -20,7 +20,7 @@ No
 Cuando heredar propiedades o métodos implementados y requiera al menos un método abstracto.
 
 ¿Qué implica una relación de Generalización entre dos clases?
-Implica herencia, quiere decir que una clase obtiene las propiedades y comportamientos que la super clase tiene. Si la super clase es abstracta, la sub clase debe resolverla o también será abstracta.
+Implica herencia, quiere decir que una clase obtiene las propiedades y comportamientos que tiene la super clase. Si la super clase es abstracta, la sub clase debe resolverla o también será abstracta.
 
 ¿Qué implica una relación de Implementación entre una clase y una interfaz?
 Implica que la clase relacionada esta obligada a implemntar los métodos definidos por la interfaz, o en su defecto, las subclases deberán hacerlo.
