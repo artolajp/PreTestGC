@@ -6,15 +6,17 @@ namespace PreTest
 {
     class CotizadorController
     {
-        private Vendedor vendedorActual;
+        public Vendedor VendedorActual { get; private set; }
 
         private List<Descuento> descuentos;
 
-        private List<Cotizacion> cotizaciones;
+        public List<Cotizacion> Cotizaciones { get; private set; }
+
+        public Prenda PrendaTarget { get; set; } = new Prenda("", 0, "", false, 0);
 
         public CotizadorController(Vendedor vendedorActual) {
-            this.vendedorActual = vendedorActual;
-            cotizaciones = new List<Cotizacion>();
+            this.VendedorActual = vendedorActual;
+            Cotizaciones = new List<Cotizacion>();
 
             descuentos = new List<Descuento>();
 
@@ -36,24 +38,56 @@ namespace PreTest
 
         }
 
-
-        public float Cotizar(Prenda prenda) {
-
-            float precio = prenda.Precio;
+        public float Cotizar(Prenda prenda, float precio, int cantidad) {
+            if(prenda == null) {
+                throw new Exception("No existe la prenda");
+            }
+            if (precio <=0) {
+                throw new Exception("Precio Invalido");
+            }
+            if (cantidad <= 0 ) {
+                throw new Exception("Cantidad invalida");
+            }
+            if (cantidad > GetStockPrenda(prenda)) {
+                throw new Exception("No hay stock suficiente");
+            }
 
             foreach (Descuento descuento in descuentos) {
                 if (descuento.Regla(prenda)) {
-                    precio = precio - precio* descuento.Porcentaje / 100;
+                    precio = precio - precio * descuento.Porcentaje / 100;
                 }
             }
 
-            cotizaciones.Add(new Cotizacion(NuevoCodigoCotizacion(),System.DateTime.Now,vendedorActual,prenda,precio));
+            precio *= cantidad;
+
+            Cotizaciones.Add(new Cotizacion(NuevoCodigoCotizacion(), System.DateTime.Now, VendedorActual, prenda, precio, cantidad));
 
             return precio;
         }
 
         private string NuevoCodigoCotizacion() {
-            return vendedorActual.CodigoVendedor+"-"+(cotizaciones.Count+1);
-        } 
+            return VendedorActual.CodigoVendedor + "-" + (Cotizaciones.Count + 1);
+        }
+
+        public int GetStockPrenda(Prenda prenda) {
+            int stock = 0;
+            foreach (Prenda p in VendedorActual.Tienda.Prendas) {
+                if (prenda.EsEquivalente(p)) stock += p.Stock;
+            }
+
+            return stock;
+        }
+
+        public Prenda GetPrendaActual() {
+            Prenda prenda = null;
+            foreach (Prenda p in VendedorActual.Tienda.Prendas) {
+                if (PrendaTarget.EsEquivalente(p)) {
+                    prenda = p;
+                    break;
+                }
+            }
+
+            return prenda;
+        }
     }
 }

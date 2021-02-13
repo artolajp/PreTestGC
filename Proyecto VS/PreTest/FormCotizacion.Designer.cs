@@ -36,7 +36,19 @@ namespace PreTest
             this.VendedorInfoText = new System.Windows.Forms.Label();
             this.CotizacionContainer = new System.Windows.Forms.Panel();
             this.CotizadorInnerPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.CotizacionMontoText = new System.Windows.Forms.Label();
+            this.CotizacionMontoLabel = new System.Windows.Forms.Label();
+            this.CotizarButton = new System.Windows.Forms.Button();
             this.PrendaCalidadPrecioContainer = new System.Windows.Forms.SplitContainer();
+            this.PrendaCalidadPremiumToggle = new System.Windows.Forms.RadioButton();
+            this.PrendaCalidadLabel = new System.Windows.Forms.Label();
+            this.PrendaCalidadStandardToggle = new System.Windows.Forms.RadioButton();
+            this.PrendaCantidadInputText = new System.Windows.Forms.TextBox();
+            this.PrendaCantidadLabel = new System.Windows.Forms.Label();
+            this.PrendaPrecioLabel = new System.Windows.Forms.Label();
+            this.PrendaPrecioInputText = new System.Windows.Forms.TextBox();
+            this.PrendaPrecioTiitleLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PrendaStockText = new System.Windows.Forms.Label();
             this.PrendaStockLabel = new System.Windows.Forms.Label();
@@ -47,30 +59,18 @@ namespace PreTest
             this.PantalonToggle = new System.Windows.Forms.RadioButton();
             this.CamisaToggle = new System.Windows.Forms.RadioButton();
             this.PrendaTitleLabel = new System.Windows.Forms.Label();
-            this.PrendaCalidadStandardToggle = new System.Windows.Forms.RadioButton();
-            this.PrendaCalidadLabel = new System.Windows.Forms.Label();
-            this.PrendaCalidadPremiumToggle = new System.Windows.Forms.RadioButton();
-            this.PrendaPrecioTiitleLabel = new System.Windows.Forms.Label();
-            this.PrendaPrecioInputText = new System.Windows.Forms.TextBox();
-            this.PrendaPrecioLabel = new System.Windows.Forms.Label();
-            this.PrendaCantidadLabel = new System.Windows.Forms.Label();
-            this.PrendaCantidadInputText = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.CotizarButton = new System.Windows.Forms.Button();
-            this.CotizacionMontoLabel = new System.Windows.Forms.Label();
-            this.CotizacionMontoText = new System.Windows.Forms.Label();
             this.TitleContainer.SuspendLayout();
             this.TiendaContainer.SuspendLayout();
             this.VendedorContainer.SuspendLayout();
             this.CotizacionContainer.SuspendLayout();
             this.CotizadorInnerPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrendaCalidadPrecioContainer)).BeginInit();
             this.PrendaCalidadPrecioContainer.Panel1.SuspendLayout();
             this.PrendaCalidadPrecioContainer.Panel2.SuspendLayout();
             this.PrendaCalidadPrecioContainer.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleContainer
@@ -83,7 +83,6 @@ namespace PreTest
             this.TitleContainer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TitleContainer.Size = new System.Drawing.Size(727, 66);
             this.TitleContainer.TabIndex = 0;
-            this.TitleContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // TitleLabel
             // 
@@ -98,7 +97,6 @@ namespace PreTest
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Cotizador Express";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TitleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // TiendaContainer
             // 
@@ -110,7 +108,6 @@ namespace PreTest
             this.TiendaContainer.Name = "TiendaContainer";
             this.TiendaContainer.Size = new System.Drawing.Size(727, 40);
             this.TiendaContainer.TabIndex = 1;
-            this.TiendaContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.TiendaContainer_Paint);
             // 
             // TiendaDireccionText
             // 
@@ -123,7 +120,6 @@ namespace PreTest
             this.TiendaDireccionText.TabIndex = 1;
             this.TiendaDireccionText.Text = "Dirección de la Tienda";
             this.TiendaDireccionText.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TiendaDireccionText.Click += new System.EventHandler(this.TiendaDireccionText_Click);
             // 
             // TiendaNombreText
             // 
@@ -159,6 +155,7 @@ namespace PreTest
             this.CotizacionesHistorialLink.TabIndex = 1;
             this.CotizacionesHistorialLink.TabStop = true;
             this.CotizacionesHistorialLink.Text = "Historial Cotizaciones";
+            this.CotizacionesHistorialLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CotizacionesHistorialLink_LinkClicked);
             // 
             // VendedorInfoText
             // 
@@ -196,6 +193,51 @@ namespace PreTest
             this.CotizadorInnerPanel.Size = new System.Drawing.Size(727, 405);
             this.CotizadorInnerPanel.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.CotizacionMontoText);
+            this.panel1.Controls.Add(this.CotizacionMontoLabel);
+            this.panel1.Controls.Add(this.CotizarButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(30, 275);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(667, 100);
+            this.panel1.TabIndex = 3;
+            // 
+            // CotizacionMontoText
+            // 
+            this.CotizacionMontoText.AutoSize = true;
+            this.CotizacionMontoText.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CotizacionMontoText.Location = new System.Drawing.Point(299, 27);
+            this.CotizacionMontoText.Name = "CotizacionMontoText";
+            this.CotizacionMontoText.Size = new System.Drawing.Size(293, 45);
+            this.CotizacionMontoText.TabIndex = 2;
+            this.CotizacionMontoText.Text = "_____________________";
+            // 
+            // CotizacionMontoLabel
+            // 
+            this.CotizacionMontoLabel.AutoSize = true;
+            this.CotizacionMontoLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CotizacionMontoLabel.Location = new System.Drawing.Point(243, 27);
+            this.CotizacionMontoLabel.Name = "CotizacionMontoLabel";
+            this.CotizacionMontoLabel.Size = new System.Drawing.Size(37, 45);
+            this.CotizacionMontoLabel.TabIndex = 1;
+            this.CotizacionMontoLabel.Text = "$";
+            // 
+            // CotizarButton
+            // 
+            this.CotizarButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CotizarButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CotizarButton.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.CotizarButton.Location = new System.Drawing.Point(17, 24);
+            this.CotizarButton.Name = "CotizarButton";
+            this.CotizarButton.Size = new System.Drawing.Size(180, 54);
+            this.CotizarButton.TabIndex = 0;
+            this.CotizarButton.Text = "Cotizar";
+            this.CotizarButton.UseVisualStyleBackColor = false;
+            this.CotizarButton.Click += new System.EventHandler(this.CotizarButton_Click);
+            // 
             // PrendaCalidadPrecioContainer
             // 
             this.PrendaCalidadPrecioContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -203,12 +245,11 @@ namespace PreTest
             this.PrendaCalidadPrecioContainer.Location = new System.Drawing.Point(30, 186);
             this.PrendaCalidadPrecioContainer.Name = "PrendaCalidadPrecioContainer";
             // 
-            // PrendaCalidadPrecioContainer.PrendaCalidadContainer
+            // PrendaCalidadPrecioContainer.Panel1
             // 
             this.PrendaCalidadPrecioContainer.Panel1.Controls.Add(this.PrendaCalidadPremiumToggle);
             this.PrendaCalidadPrecioContainer.Panel1.Controls.Add(this.PrendaCalidadLabel);
             this.PrendaCalidadPrecioContainer.Panel1.Controls.Add(this.PrendaCalidadStandardToggle);
-            this.PrendaCalidadPrecioContainer.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             this.PrendaCalidadPrecioContainer.Panel1MinSize = 250;
             // 
             // PrendaCalidadPrecioContainer.Panel2
@@ -223,6 +264,83 @@ namespace PreTest
             this.PrendaCalidadPrecioContainer.SplitterDistance = 277;
             this.PrendaCalidadPrecioContainer.SplitterWidth = 10;
             this.PrendaCalidadPrecioContainer.TabIndex = 2;
+            // 
+            // PrendaCalidadPremiumToggle
+            // 
+            this.PrendaCalidadPremiumToggle.AutoSize = true;
+            this.PrendaCalidadPremiumToggle.Location = new System.Drawing.Point(114, 27);
+            this.PrendaCalidadPremiumToggle.Name = "PrendaCalidadPremiumToggle";
+            this.PrendaCalidadPremiumToggle.Size = new System.Drawing.Size(74, 19);
+            this.PrendaCalidadPremiumToggle.TabIndex = 2;
+            this.PrendaCalidadPremiumToggle.TabStop = true;
+            this.PrendaCalidadPremiumToggle.Text = "Premium";
+            this.PrendaCalidadPremiumToggle.UseVisualStyleBackColor = true;
+            this.PrendaCalidadPremiumToggle.CheckedChanged += new System.EventHandler(this.PrendaCalidadPremiumToggle_CheckedChanged);
+            // 
+            // PrendaCalidadLabel
+            // 
+            this.PrendaCalidadLabel.AutoSize = true;
+            this.PrendaCalidadLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PrendaCalidadLabel.Location = new System.Drawing.Point(0, 0);
+            this.PrendaCalidadLabel.Name = "PrendaCalidadLabel";
+            this.PrendaCalidadLabel.Size = new System.Drawing.Size(103, 15);
+            this.PrendaCalidadLabel.TabIndex = 1;
+            this.PrendaCalidadLabel.Text = "Calidad de Prenda";
+            // 
+            // PrendaCalidadStandardToggle
+            // 
+            this.PrendaCalidadStandardToggle.AutoSize = true;
+            this.PrendaCalidadStandardToggle.Location = new System.Drawing.Point(17, 27);
+            this.PrendaCalidadStandardToggle.Name = "PrendaCalidadStandardToggle";
+            this.PrendaCalidadStandardToggle.Size = new System.Drawing.Size(72, 19);
+            this.PrendaCalidadStandardToggle.TabIndex = 0;
+            this.PrendaCalidadStandardToggle.TabStop = true;
+            this.PrendaCalidadStandardToggle.Text = "Standard";
+            this.PrendaCalidadStandardToggle.UseVisualStyleBackColor = true;
+            this.PrendaCalidadStandardToggle.CheckedChanged += new System.EventHandler(this.PrendaCalidadStandardToggle_CheckedChanged);
+            // 
+            // PrendaCantidadInputText
+            // 
+            this.PrendaCantidadInputText.Location = new System.Drawing.Point(209, 26);
+            this.PrendaCantidadInputText.Name = "PrendaCantidadInputText";
+            this.PrendaCantidadInputText.Size = new System.Drawing.Size(100, 23);
+            this.PrendaCantidadInputText.TabIndex = 4;
+            this.PrendaCantidadInputText.TextChanged += new System.EventHandler(this.PrendaCantidadInputText_TextChanged);
+            // 
+            // PrendaCantidadLabel
+            // 
+            this.PrendaCantidadLabel.AutoSize = true;
+            this.PrendaCantidadLabel.Location = new System.Drawing.Point(148, 29);
+            this.PrendaCantidadLabel.Name = "PrendaCantidadLabel";
+            this.PrendaCantidadLabel.Size = new System.Drawing.Size(55, 15);
+            this.PrendaCantidadLabel.TabIndex = 3;
+            this.PrendaCantidadLabel.Text = "Cantidad";
+            // 
+            // PrendaPrecioLabel
+            // 
+            this.PrendaPrecioLabel.AutoSize = true;
+            this.PrendaPrecioLabel.Location = new System.Drawing.Point(7, 31);
+            this.PrendaPrecioLabel.Name = "PrendaPrecioLabel";
+            this.PrendaPrecioLabel.Size = new System.Drawing.Size(13, 15);
+            this.PrendaPrecioLabel.TabIndex = 2;
+            this.PrendaPrecioLabel.Text = "$";
+            // 
+            // PrendaPrecioInputText
+            // 
+            this.PrendaPrecioInputText.Location = new System.Drawing.Point(26, 26);
+            this.PrendaPrecioInputText.Name = "PrendaPrecioInputText";
+            this.PrendaPrecioInputText.Size = new System.Drawing.Size(100, 23);
+            this.PrendaPrecioInputText.TabIndex = 1;
+            this.PrendaPrecioInputText.TextChanged += new System.EventHandler(this.PrendaPrecioInputText_TextChanged);
+            // 
+            // PrendaPrecioTiitleLabel
+            // 
+            this.PrendaPrecioTiitleLabel.AutoSize = true;
+            this.PrendaPrecioTiitleLabel.Location = new System.Drawing.Point(3, 0);
+            this.PrendaPrecioTiitleLabel.Name = "PrendaPrecioTiitleLabel";
+            this.PrendaPrecioTiitleLabel.Size = new System.Drawing.Size(142, 15);
+            this.PrendaPrecioTiitleLabel.TabIndex = 0;
+            this.PrendaPrecioTiitleLabel.Text = "Precio unitario y cantidad";
             // 
             // panel3
             // 
@@ -277,6 +395,7 @@ namespace PreTest
             this.PantalonChupinBox.TabIndex = 5;
             this.PantalonChupinBox.Text = "Chupín";
             this.PantalonChupinBox.UseVisualStyleBackColor = true;
+            this.PantalonChupinBox.CheckedChanged += new System.EventHandler(this.PantalonChupinBox_CheckedChanged);
             // 
             // CamisaCuelloMaoBox
             // 
@@ -287,6 +406,7 @@ namespace PreTest
             this.CamisaCuelloMaoBox.TabIndex = 4;
             this.CamisaCuelloMaoBox.Text = "Cuello Mao";
             this.CamisaCuelloMaoBox.UseVisualStyleBackColor = true;
+            this.CamisaCuelloMaoBox.CheckedChanged += new System.EventHandler(this.CamisaCuelloMaoBox_CheckedChanged);
             // 
             // CamisaMangaCortaBox
             // 
@@ -297,6 +417,7 @@ namespace PreTest
             this.CamisaMangaCortaBox.TabIndex = 3;
             this.CamisaMangaCortaBox.Text = "Manga Corta";
             this.CamisaMangaCortaBox.UseVisualStyleBackColor = true;
+            this.CamisaMangaCortaBox.CheckedChanged += new System.EventHandler(this.CamisaMangaCortaBox_CheckedChanged);
             // 
             // PantalonToggle
             // 
@@ -305,9 +426,9 @@ namespace PreTest
             this.PantalonToggle.Name = "PantalonToggle";
             this.PantalonToggle.Size = new System.Drawing.Size(72, 19);
             this.PantalonToggle.TabIndex = 2;
-            this.PantalonToggle.TabStop = true;
             this.PantalonToggle.Text = "Pantalón";
             this.PantalonToggle.UseVisualStyleBackColor = true;
+            this.PantalonToggle.CheckedChanged += new System.EventHandler(this.PantalonToggle_CheckedChanged);
             // 
             // CamisaToggle
             // 
@@ -316,9 +437,9 @@ namespace PreTest
             this.CamisaToggle.Name = "CamisaToggle";
             this.CamisaToggle.Size = new System.Drawing.Size(64, 19);
             this.CamisaToggle.TabIndex = 1;
-            this.CamisaToggle.TabStop = true;
             this.CamisaToggle.Text = "Camisa";
             this.CamisaToggle.UseVisualStyleBackColor = true;
+            this.CamisaToggle.CheckedChanged += new System.EventHandler(this.CamisaToggle_CheckedChanged);
             // 
             // PrendaTitleLabel
             // 
@@ -328,125 +449,6 @@ namespace PreTest
             this.PrendaTitleLabel.Size = new System.Drawing.Size(44, 15);
             this.PrendaTitleLabel.TabIndex = 0;
             this.PrendaTitleLabel.Text = "Prenda";
-            // 
-            // PrendaCalidadStandardToggle
-            // 
-            this.PrendaCalidadStandardToggle.AutoSize = true;
-            this.PrendaCalidadStandardToggle.Location = new System.Drawing.Point(17, 27);
-            this.PrendaCalidadStandardToggle.Name = "PrendaCalidadStandardToggle";
-            this.PrendaCalidadStandardToggle.Size = new System.Drawing.Size(72, 19);
-            this.PrendaCalidadStandardToggle.TabIndex = 0;
-            this.PrendaCalidadStandardToggle.TabStop = true;
-            this.PrendaCalidadStandardToggle.Text = "Standard";
-            this.PrendaCalidadStandardToggle.UseVisualStyleBackColor = true;
-            // 
-            // PrendaCalidadLabel
-            // 
-            this.PrendaCalidadLabel.AutoSize = true;
-            this.PrendaCalidadLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PrendaCalidadLabel.Location = new System.Drawing.Point(0, 0);
-            this.PrendaCalidadLabel.Name = "PrendaCalidadLabel";
-            this.PrendaCalidadLabel.Size = new System.Drawing.Size(103, 15);
-            this.PrendaCalidadLabel.TabIndex = 1;
-            this.PrendaCalidadLabel.Text = "Calidad de Prenda";
-            this.PrendaCalidadLabel.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // PrendaCalidadPremiumToggle
-            // 
-            this.PrendaCalidadPremiumToggle.AutoSize = true;
-            this.PrendaCalidadPremiumToggle.Location = new System.Drawing.Point(114, 27);
-            this.PrendaCalidadPremiumToggle.Name = "PrendaCalidadPremiumToggle";
-            this.PrendaCalidadPremiumToggle.Size = new System.Drawing.Size(74, 19);
-            this.PrendaCalidadPremiumToggle.TabIndex = 2;
-            this.PrendaCalidadPremiumToggle.TabStop = true;
-            this.PrendaCalidadPremiumToggle.Text = "Premium";
-            this.PrendaCalidadPremiumToggle.UseVisualStyleBackColor = true;
-            // 
-            // PrendaPrecioTiitleLabel
-            // 
-            this.PrendaPrecioTiitleLabel.AutoSize = true;
-            this.PrendaPrecioTiitleLabel.Location = new System.Drawing.Point(3, 0);
-            this.PrendaPrecioTiitleLabel.Name = "PrendaPrecioTiitleLabel";
-            this.PrendaPrecioTiitleLabel.Size = new System.Drawing.Size(142, 15);
-            this.PrendaPrecioTiitleLabel.TabIndex = 0;
-            this.PrendaPrecioTiitleLabel.Text = "Precio unitario y cantidad";
-            // 
-            // PrendaPrecioInputText
-            // 
-            this.PrendaPrecioInputText.Location = new System.Drawing.Point(26, 26);
-            this.PrendaPrecioInputText.Name = "PrendaPrecioInputText";
-            this.PrendaPrecioInputText.Size = new System.Drawing.Size(100, 23);
-            this.PrendaPrecioInputText.TabIndex = 1;
-            // 
-            // PrendaPrecioLabel
-            // 
-            this.PrendaPrecioLabel.AutoSize = true;
-            this.PrendaPrecioLabel.Location = new System.Drawing.Point(7, 31);
-            this.PrendaPrecioLabel.Name = "PrendaPrecioLabel";
-            this.PrendaPrecioLabel.Size = new System.Drawing.Size(13, 15);
-            this.PrendaPrecioLabel.TabIndex = 2;
-            this.PrendaPrecioLabel.Text = "$";
-            // 
-            // PrendaCantidadLabel
-            // 
-            this.PrendaCantidadLabel.AutoSize = true;
-            this.PrendaCantidadLabel.Location = new System.Drawing.Point(148, 29);
-            this.PrendaCantidadLabel.Name = "PrendaCantidadLabel";
-            this.PrendaCantidadLabel.Size = new System.Drawing.Size(55, 15);
-            this.PrendaCantidadLabel.TabIndex = 3;
-            this.PrendaCantidadLabel.Text = "Cantidad";
-            // 
-            // PrendaCantidadInputText
-            // 
-            this.PrendaCantidadInputText.Location = new System.Drawing.Point(209, 26);
-            this.PrendaCantidadInputText.Name = "PrendaCantidadInputText";
-            this.PrendaCantidadInputText.Size = new System.Drawing.Size(100, 23);
-            this.PrendaCantidadInputText.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.CotizacionMontoText);
-            this.panel1.Controls.Add(this.CotizacionMontoLabel);
-            this.panel1.Controls.Add(this.CotizarButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(30, 275);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(667, 100);
-            this.panel1.TabIndex = 3;
-            // 
-            // CotizarButton
-            // 
-            this.CotizarButton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.CotizarButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CotizarButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.CotizarButton.Location = new System.Drawing.Point(17, 24);
-            this.CotizarButton.Name = "CotizarButton";
-            this.CotizarButton.Size = new System.Drawing.Size(180, 54);
-            this.CotizarButton.TabIndex = 0;
-            this.CotizarButton.Text = "Cotizar";
-            this.CotizarButton.UseVisualStyleBackColor = false;
-            // 
-            // CotizacionMontoLabel
-            // 
-            this.CotizacionMontoLabel.AutoSize = true;
-            this.CotizacionMontoLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CotizacionMontoLabel.Location = new System.Drawing.Point(243, 27);
-            this.CotizacionMontoLabel.Name = "CotizacionMontoLabel";
-            this.CotizacionMontoLabel.Size = new System.Drawing.Size(37, 45);
-            this.CotizacionMontoLabel.TabIndex = 1;
-            this.CotizacionMontoLabel.Text = "$";
-            this.CotizacionMontoLabel.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // CotizacionMontoText
-            // 
-            this.CotizacionMontoText.AutoSize = true;
-            this.CotizacionMontoText.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CotizacionMontoText.Location = new System.Drawing.Point(299, 27);
-            this.CotizacionMontoText.Name = "CotizacionMontoText";
-            this.CotizacionMontoText.Size = new System.Drawing.Size(293, 45);
-            this.CotizacionMontoText.TabIndex = 2;
-            this.CotizacionMontoText.Text = "_____________________";
             // 
             // FormCotizacion
             // 
@@ -467,6 +469,8 @@ namespace PreTest
             this.CotizacionContainer.ResumeLayout(false);
             this.CotizadorInnerPanel.ResumeLayout(false);
             this.CotizadorInnerPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.PrendaCalidadPrecioContainer.Panel1.ResumeLayout(false);
             this.PrendaCalidadPrecioContainer.Panel1.PerformLayout();
             this.PrendaCalidadPrecioContainer.Panel2.ResumeLayout(false);
@@ -477,8 +481,6 @@ namespace PreTest
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
