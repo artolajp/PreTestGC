@@ -1,0 +1,15 @@
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\bin\Debug\netcoreapp3.1\PreTest.exe
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\bin\Debug\netcoreapp3.1\PreTest.deps.json
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\bin\Debug\netcoreapp3.1\PreTest.runtimeconfig.json
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\bin\Debug\netcoreapp3.1\PreTest.runtimeconfig.dev.json
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\bin\Debug\netcoreapp3.1\PreTest.dll
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\bin\Debug\netcoreapp3.1\PreTest.pdb
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.csprojAssemblyReference.cache
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.FormCotizacion.resources
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.csproj.GenerateResource.cache
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.AssemblyInfoInputs.cache
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.AssemblyInfo.cs
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.csproj.CoreCompileInputs.cache
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.dll
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.pdb
+G:\ProyectosC#\PreTest\Proyecto VS\PreTest\obj\Debug\netcoreapp3.1\PreTest.genruntimeconfig.cache
