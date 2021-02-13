@@ -5,9 +5,9 @@ Parte F
 
 ¿Cómo se podría establecer a estos objetos como imprimibles?.
 
-Propongo crear una interfaz <<Imprimible>> con un método "Imprimir" con el objetivo de que cualquier clase que la implemplente se encargue de comunicarse con el responsable de imprimir o en su defecto que devuelva un objeto que el responsable de impresión necesita.
+Propongo crear una interfaz "Imprimible" con un método "Imprimir" con el objetivo de que cualquier clase que la implemplente se encargue de comunicarse con el responsable de imprimir o en su defecto que devuelva un objeto que el responsable de impresión necesita.
 
-Por lo tanto la clase Cotización deberia implementar la interfaz <<Imprimible>> y para el historial se debería crear una clase que contenga la lista de cotizaciones e implemente la interfaz <<Imprimible>>.
+Por lo tanto la clase Cotización deberia implementar la interfaz "Imprimible" y para el historial se debería crear una clase que contenga la lista de cotizaciones e implemente la interfaz "Imprimible".
 
 Parte H
 
