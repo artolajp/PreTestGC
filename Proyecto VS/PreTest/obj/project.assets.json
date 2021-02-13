@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\ProyectosC#\\PreTest\\Proyecto\\PreTest\\PreTest.csproj",
+      "projectUniqueName": "G:\\ProyectosC#\\PreTest\\Proyecto VS\\PreTest\\PreTest.csproj",
       "projectName": "PreTest",
-      "projectPath": "G:\\ProyectosC#\\PreTest\\Proyecto\\PreTest\\PreTest.csproj",
+      "projectPath": "G:\\ProyectosC#\\PreTest\\Proyecto VS\\PreTest\\PreTest.csproj",
       "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "G:\\ProyectosC#\\PreTest\\Proyecto\\PreTest\\obj\\",
+      "outputPath": "G:\\ProyectosC#\\PreTest\\Proyecto VS\\PreTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",

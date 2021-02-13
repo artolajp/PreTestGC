@@ -9,6 +9,7 @@ namespace PreTest
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string CodigoVendedor { get; set; }
+        public Tienda Tienda { get; set; }
 
     }
 }
