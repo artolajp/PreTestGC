@@ -73,6 +73,10 @@ namespace PreTest
             stockPrendaActual = cotizador.GetStockPrenda(cotizador.PrendaTarget);
             PrendaStockText.Text = stockPrendaActual.ToString();
             OnCantidadChanged();
+
+            precioTarget = cotizador.GetPrendaActual().Precio;
+            PrendaPrecioInputText.Text = precioTarget.ToString("0.00");
+            OnPrecioChanged();
         }
 
         private void CamisaToggle_CheckedChanged(object sender, EventArgs e) {
@@ -141,7 +145,7 @@ namespace PreTest
                 Prenda prenda = cotizador.GetPrendaActual();
                 prenda.EsPremiun = cotizador.PrendaTarget.EsPremiun;// !!! se va actualizado porque no distinción de la calidad del stock actual
 
-                float cotizacion = cotizador.Cotizar(cotizador.GetPrendaActual(), precioTarget, cantidadTarget);
+                float cotizacion = cotizador.Cotizar(prenda, precioTarget, cantidadTarget);
                 CotizacionMontoText.Text = cotizacion.ToString("0.00");
             } catch (Exception ex) {
                 MessageBox.Show(ex.Message, "Hubo un error");

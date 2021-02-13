@@ -34,7 +34,7 @@ namespace PreTest
             //N 5- Si la calidad de la prenda es Standard: el precio no se modifica. 
 
             //RN 6- Si la calidad de la prenda es Premium: el precio aumenta en un 30%.
-            descuentos.Add(new Descuento(-30, (Prenda prenda) => prenda is Pantalon && prenda.EsPremiun));
+            descuentos.Add(new Descuento(-30, (Prenda prenda) => prenda.EsPremiun));
 
         }
 
