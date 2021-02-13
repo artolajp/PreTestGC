@@ -6,11 +6,19 @@ namespace PreTest
 {
     class Cotizacion
     {
-        public int ID { get; }
-        public DateTime FechaHora { get; set; }
-        public Vendedor Vendedor { get; set; }
-        public Prenda Prenda { get; set; }
+        public string ID { get; }
+        public DateTime FechaHora { get;  }
+        public Vendedor Vendedor { get; }
+        public Prenda Prenda { get; }
+        public float Monto { get; }
 
+        public Cotizacion(string iD, DateTime fechaHora, Vendedor vendedor, Prenda prenda, float monto) {
+            ID = iD;
+            FechaHora = fechaHora;
+            Vendedor = vendedor;
+            Prenda = prenda;
+            Monto = monto;
+        }
 
     }
 }
